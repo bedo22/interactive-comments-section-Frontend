@@ -38,7 +38,7 @@ pnpm build
 
 ## Live Demo
 
-[GitHub Pages](https://bedo22.github.io/interactive-comments-section-Frontend/)
+[Netlify](https://interactive-comment-react.netlify.app/)
 
 ## Credits
 
