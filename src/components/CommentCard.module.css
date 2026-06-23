@@ -1,0 +1,156 @@
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.reply {
+  margin-left: 40px;
+  border-left: none;
+  position: relative;
+}
+
+.reply::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--grey-100);
+}
+
+.voteCol {
+  grid-row: 1;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 500;
+  color: var(--grey-800);
+}
+
+.badge {
+  background-color: var(--purple-600);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.time {
+  color: var(--grey-500);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 4px;
+  border-radius: 4px;
+}
+
+.replyBtn {
+  color: var(--purple-600);
+}
+
+.replyBtn:hover {
+  opacity: 0.7;
+}
+
+.deleteBtn {
+  color: var(--pink-400);
+}
+
+.deleteBtn:hover {
+  opacity: 0.7;
+}
+
+.editBtn {
+  color: var(--purple-600);
+}
+
+.editBtn:hover {
+  opacity: 0.7;
+}
+
+.body p {
+  color: var(--grey-500);
+  line-height: 1.6;
+}
+
+.mention {
+  color: var(--purple-600);
+  font-weight: 500;
+}
+
+.mobileFooter {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .reply {
+    margin-left: 20px;
+  }
+
+  .voteCol {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobileFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobileFooter .actions {
+    display: flex;
+  }
+}
